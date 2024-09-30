@@ -1,0 +1,40 @@
+.find {
+  position: relative;
+  width: min-content;
+  display: flex;
+  align-items: center;
+  button {
+    border: none;
+    background: none;
+    position: absolute;
+    right: 12px;
+  }
+  .f {
+    position: absolute;
+    left: 12px;
+  }
+  input {
+    height: 36px;
+    width: 336px;
+    padding-left: 42px;
+    padding-right: 42px;
+    @media (max-width: 1023px) {
+      width: 296px;
+    }
+    @media (max-width: 767px) {
+      height: 33px;
+      width: 224px;
+    }
+  }
+}
+
+.dark {
+  .icon {
+    fill: var(--primary-light-gray);
+  }
+}
+.light {
+  .icon {
+    fill: var(--primary-dark-gray);
+  }
+}

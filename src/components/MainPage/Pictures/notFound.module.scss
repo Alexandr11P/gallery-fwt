@@ -1,0 +1,18 @@
+.not_found {
+  p:first-child {
+    font-size: 16px;
+    span {
+      font-weight: 500;
+    }
+  }
+  p:last-child {
+    color: var(--secondary-gray);
+  }
+}
+
+.dark {
+  color: var(--primary-light-gray);
+}
+.light {
+  color: var(--primary-dark-gray);
+}

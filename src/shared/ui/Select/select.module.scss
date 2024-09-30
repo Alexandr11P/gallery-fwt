@@ -1,0 +1,128 @@
+.option {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: start;
+  padding-left: 15px;
+}
+
+.options {
+  overflow: hidden;
+  display: none;
+}
+
+.close,
+.open {
+  position: relative;
+  max-width: 500px;
+  .input {
+    display: block;
+    width: 100%;
+    padding: 0 30px 0 15px;
+  }
+  button {
+    display: block;
+    color: inherit;
+  }
+  .input,
+  .option {
+    height: 36px;
+    @media (max-width: 767px) {
+      height: 33px;
+    }
+  }
+}
+
+.open {
+  .input_box {
+    border-radius: 4px 4px 0 0;
+    padding-bottom: 10px;
+  }
+  .icon {
+    transform: scaleY(-1);
+  }
+  .options {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    display: block;
+    max-height: 256px;
+    overflow-y: scroll;
+    border-radius: 0 0 4px 4px;
+  }
+}
+
+.input_box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.icon {
+  position: absolute;
+  right: 10px;
+}
+
+.dark {
+  .icon {
+    fill: var(--primary-dark-gray);
+  }
+  .options,
+  .input_box {
+    color: var(--primary-light-gray);
+    background-color: var(--secondary-black);
+  }
+  border-radius: 4px;
+
+  .option:hover {
+    background-color: var(--primary-dark-gray);
+  }
+  .options::-webkit-scrollbar {
+    width: 4px;
+  }
+  .options::-webkit-scrollbar-thumb {
+    background-color: var(--primary-light-gray);
+    border-radius: 4px;
+  }
+}
+.light {
+  .icon {
+    fill: var(--secondary-gray);
+  }
+  .options,
+  .input_box {
+    color: var(--primary-dark-gray);
+    background-color: var(--primary-white);
+  }
+  border-radius: 4px;
+  .option:hover {
+    background-color: var(--primary-light-gray);
+  }
+  .options::-webkit-scrollbar {
+    width: 4px;
+  }
+  .options::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-gray);
+    border-radius: 4px;
+  }
+}
+
+@-moz-document url-prefix() {
+  .dark {
+    .options {
+      scrollbar-width: thin;
+      scrollbar-color: var(--primary-light-gray) var(--secondary-black);
+    }
+  }
+  .light {
+    .options {
+      scrollbar-width: thin;
+      scrollbar-color: var(--secondary-gray) var(--primary-white);
+    }
+  }
+}
+
+.not_found {
+  padding: 20px;
+}

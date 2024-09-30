@@ -1,0 +1,29 @@
+.input {
+  border-radius: 4px;
+  outline: none;
+  text-overflow: ellipsis;
+}
+
+.dark {
+  background-color: var(--secondary-black);
+  border: 1px solid var(--secondary-black);
+  color: var(--primary-light-gray);
+  ::placeholder {
+    color: var(--primary-dark-gray);
+  }
+  &:focus {
+    border: 1px solid var(--primary-light-gray);
+  }
+}
+
+.light {
+  background-color: var(--primary-white);
+  border: 1px solid var(--primary-light-gray);
+  color: var(--primary-dark-gray);
+  ::placeholder {
+    color: var(--secondary-gray);
+  }
+  &:focus {
+    border: 1px solid var(--primary-dark-gray);
+  }
+}

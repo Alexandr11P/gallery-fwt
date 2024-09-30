@@ -1,0 +1,32 @@
+.btn {
+  border: none;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+.dark {
+  background-color: var(--secondary-black);
+  .svg {
+    fill: var(--primary-light-gray);
+  }
+  &:hover {
+    .svg {
+      fill: var(--primary-white);
+    }
+  }
+}
+.light {
+  background-color: var(--primary-light-gray);
+  &:hover {
+    background-color: var(--secondary-gray);
+    .svg {
+      fill: var(--primary-black);
+    }
+  }
+  .svg {
+    fill: var(--primary-dark-gray);
+  }
+}

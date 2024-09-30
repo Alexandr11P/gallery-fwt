@@ -1,0 +1,28 @@
+.btn {
+  border: none;
+  background: none;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  border-bottom: 1px solid;
+}
+.dark {
+  color: var(--primary-light-gray);
+
+  &:hover {
+    color: var(--primary-white);
+  }
+  &:disabled {
+    color: var(--primary-dark-gray);
+  }
+}
+.light {
+  color: var(--primary-dark-gray);
+
+  &:hover {
+    color: var(--primary-black);
+  }
+  &:disabled {
+    color: var(--secondary-gray);
+  }
+}

@@ -9,10 +9,24 @@
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": ["./tsconfig.app.json"]
+    "project": ["tsconfig.app.json"]
   },
-  "ignorePatterns": ["vite.config.ts", "dist"],
+  "ignorePatterns": ["vite.config.ts", "dist", "*.d.ts"],
   "rules": {
     "react/react-in-jsx-scope": "off"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.slice.ts"],
+      "rules": { "no-param-reassign": "off" }
+    },
+    {
+      "files": ["src/shared/ui/**"],
+      "rules": { "react/jsx-props-no-spreading": "off" }
+    },
+    {
+      "files": ["src/**"],
+      "rules": { "import/extensions": "off" }
+    }
+  ]
 }
